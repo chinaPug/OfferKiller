@@ -1,0 +1,199 @@
+2023-06-01 11:24:37.500 [main] INFO  com.xiaostudy.eureka.EurekaApplication - Starting EurekaApplication using Java 1.8.0_152 on 阳光小男孩的阳光笔记本 with PID 75356 (D:\SpringCloud202208\eureka\target\classes started by 阳光小男孩的笔记本 in D:\SpringCloud202208)
+2023-06-01 11:24:37.506 [main] INFO  com.xiaostudy.eureka.EurekaApplication - The following 1 profile is active: "log"
+2023-06-01 11:24:38.396 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=313a0af6-23f2-3501-ba7e-00c37e869456
+2023-06-01 11:24:38.624 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9900 (http)
+2023-06-01 11:24:38.632 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9900"]
+2023-06-01 11:24:38.632 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-01 11:24:38.633 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-06-01 11:24:38.767 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-01 11:24:38.768 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1213 ms
+2023-06-01 11:24:39.166 [main] INFO  c.s.j.server.impl.application.WebApplicationImpl - Initiating Jersey application, version 'Jersey: 1.19.4 05/24/2017 03:20 PM'
+2023-06-01 11:24:39.216 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2023-06-01 11:24:39.217 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2023-06-01 11:24:39.304 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2023-06-01 11:24:39.305 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2023-06-01 11:24:39.686 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@21274afe, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@76a362a4, org.springframework.security.web.context.SecurityContextPersistenceFilter@2484dbb7, org.springframework.security.web.header.HeaderWriterFilter@794240e2, org.springframework.security.web.authentication.logout.LogoutFilter@129c4d19, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6e95973c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4a1a412e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@61da0413, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7364f68, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@48e41b5d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@14d8e132, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5627cb29, org.springframework.security.web.session.SessionManagementFilter@5a30722c, org.springframework.security.web.access.ExceptionTranslationFilter@3009eed7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@629075f4]
+2023-06-01 11:24:40.650 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses Jersey
+2023-06-01 11:24:40.690 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-06-01 11:24:40.707 [main] INFO  o.s.cloud.netflix.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2023-06-01 11:24:40.734 [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2023-06-01 11:24:40.734 [main] INFO  com.netflix.discovery.DiscoveryClient - Client configured to neither register nor query for data.
+2023-06-01 11:24:40.740 [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1685589880739 with initial instances count: 0
+2023-06-01 11:24:40.772 [main] INFO  com.netflix.eureka.DefaultEurekaServerContext - Initializing ...
+2023-06-01 11:24:40.774 [main] WARN  com.netflix.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2023-06-01 11:24:40.789 [main] INFO  c.netflix.eureka.registry.AbstractInstanceRegistry - Finished initializing remote region registries. All known remote regions: []
+2023-06-01 11:24:40.791 [main] INFO  com.netflix.eureka.DefaultEurekaServerContext - Initialized
+2023-06-01 11:24:40.797 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-01 11:24:40.851 [main] INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry - Registering application EUREKA-SERVICE with eureka with status UP
+2023-06-01 11:24:40.853 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9900"]
+2023-06-01 11:24:40.858 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 9900 is already in use
+2023-06-01 11:24:40.859 [main] INFO  com.netflix.eureka.DefaultEurekaServerContext - Shutting down ...
+2023-06-01 11:24:40.863 [Thread-17] INFO  o.s.c.netflix.eureka.server.EurekaServerBootstrap - isAws returned false
+2023-06-01 11:24:40.864 [Thread-17] INFO  o.s.c.netflix.eureka.server.EurekaServerBootstrap - Initialized server context
+2023-06-01 11:24:40.864 [Thread-17] INFO  c.n.eureka.registry.PeerAwareInstanceRegistryImpl - Got 1 instances from neighboring DS node
+2023-06-01 11:24:40.864 [Thread-17] INFO  c.n.eureka.registry.PeerAwareInstanceRegistryImpl - Renew threshold is: 0
+2023-06-01 11:24:40.864 [Thread-17] INFO  c.n.eureka.registry.PeerAwareInstanceRegistryImpl - Changing status to UP
+2023-06-01 11:24:40.867 [Thread-17] ERROR o.s.c.netflix.eureka.server.EurekaServerBootstrap - Cannot bootstrap eureka server :
+java.lang.IllegalStateException: Timer already cancelled.
+	at java.util.Timer.sched(Timer.java:397)
+	at java.util.Timer.schedule(Timer.java:248)
+	at com.netflix.eureka.registry.AbstractInstanceRegistry.postInit(AbstractInstanceRegistry.java:1218)
+	at com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl.openForTraffic(PeerAwareInstanceRegistryImpl.java:258)
+	at org.springframework.cloud.netflix.eureka.server.InstanceRegistry.openForTraffic(InstanceRegistry.java:74)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.initEurekaServerContext(EurekaServerBootstrap.java:113)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.contextInitialized(EurekaServerBootstrap.java:71)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerInitializerConfiguration.lambda$start$0(EurekaServerInitializerConfiguration.java:68)
+	at java.lang.Thread.run(Thread.java:748)
+2023-06-01 11:24:40.882 [Thread-17] ERROR o.s.c.n.e.s.EurekaServerInitializerConfiguration - Could not initialize Eureka servlet context
+java.lang.RuntimeException: Cannot bootstrap eureka server :
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.contextInitialized(EurekaServerBootstrap.java:77)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerInitializerConfiguration.lambda$start$0(EurekaServerInitializerConfiguration.java:68)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Timer already cancelled.
+	at java.util.Timer.sched(Timer.java:397)
+	at java.util.Timer.schedule(Timer.java:248)
+	at com.netflix.eureka.registry.AbstractInstanceRegistry.postInit(AbstractInstanceRegistry.java:1218)
+	at com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl.openForTraffic(PeerAwareInstanceRegistryImpl.java:258)
+	at org.springframework.cloud.netflix.eureka.server.InstanceRegistry.openForTraffic(InstanceRegistry.java:74)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.initEurekaServerContext(EurekaServerBootstrap.java:113)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.contextInitialized(EurekaServerBootstrap.java:71)
+	... 2 common frames omitted
+2023-06-01 11:24:40.890 [main] INFO  com.netflix.eureka.DefaultEurekaServerContext - Shut down
+2023-06-01 11:24:40.898 [main] INFO  com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2023-06-01 11:24:40.898 [main] INFO  com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2023-06-01 11:24:40.901 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-9900"]
+2023-06-01 11:24:40.901 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2023-06-01 11:24:40.957 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9900"]
+2023-06-01 11:24:40.959 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-9900"]
+2023-06-01 11:24:40.988 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-06-01 11:24:41.012 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9900 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9900 or configure this application to listen on another port.
+
+2023-06-01 11:24:54.042 [main] INFO  com.xiaostudy.eureka.EurekaApplication - Starting EurekaApplication using Java 1.8.0_152 on 阳光小男孩的阳光笔记本 with PID 75728 (D:\SpringCloud202208\eureka\target\classes started by 阳光小男孩的笔记本 in D:\SpringCloud202208)
+2023-06-01 11:24:54.045 [main] INFO  com.xiaostudy.eureka.EurekaApplication - The following 1 profile is active: "log"
+2023-06-01 11:24:54.916 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=313a0af6-23f2-3501-ba7e-00c37e869456
+2023-06-01 11:24:55.146 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9900 (http)
+2023-06-01 11:24:55.154 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9900"]
+2023-06-01 11:24:55.155 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-01 11:24:55.155 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-06-01 11:24:55.288 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-01 11:24:55.288 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1195 ms
+2023-06-01 11:24:55.765 [main] INFO  c.s.j.server.impl.application.WebApplicationImpl - Initiating Jersey application, version 'Jersey: 1.19.4 05/24/2017 03:20 PM'
+2023-06-01 11:24:55.826 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2023-06-01 11:24:55.827 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2023-06-01 11:24:55.918 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2023-06-01 11:24:55.918 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2023-06-01 11:24:56.281 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7364f68, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@55a0f011, org.springframework.security.web.context.SecurityContextPersistenceFilter@2ee4706d, org.springframework.security.web.header.HeaderWriterFilter@55296b50, org.springframework.security.web.authentication.logout.LogoutFilter@50cdfafa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@48499739, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@51e8d066, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7ea42c82, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@71531dd7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64279ab, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@111cba40, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@39133244, org.springframework.security.web.session.SessionManagementFilter@29c53c4f, org.springframework.security.web.access.ExceptionTranslationFilter@231df705, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@39652a30]
+2023-06-01 11:24:57.198 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses Jersey
+2023-06-01 11:24:57.234 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-06-01 11:24:57.247 [main] INFO  o.s.cloud.netflix.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2023-06-01 11:24:57.270 [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2023-06-01 11:24:57.271 [main] INFO  com.netflix.discovery.DiscoveryClient - Client configured to neither register nor query for data.
+2023-06-01 11:24:57.276 [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1685589897275 with initial instances count: 0
+2023-06-01 11:24:57.304 [main] INFO  com.netflix.eureka.DefaultEurekaServerContext - Initializing ...
+2023-06-01 11:24:57.306 [main] WARN  com.netflix.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2023-06-01 11:24:57.322 [main] INFO  c.netflix.eureka.registry.AbstractInstanceRegistry - Finished initializing remote region registries. All known remote regions: []
+2023-06-01 11:24:57.325 [main] INFO  com.netflix.eureka.DefaultEurekaServerContext - Initialized
+2023-06-01 11:24:57.341 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-01 11:24:57.413 [main] INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry - Registering application EUREKA-SERVICE with eureka with status UP
+2023-06-01 11:24:57.415 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9900"]
+2023-06-01 11:24:57.426 [Thread-18] INFO  o.s.c.netflix.eureka.server.EurekaServerBootstrap - isAws returned false
+2023-06-01 11:24:57.426 [Thread-18] INFO  o.s.c.netflix.eureka.server.EurekaServerBootstrap - Initialized server context
+2023-06-01 11:24:57.427 [Thread-18] INFO  c.n.eureka.registry.PeerAwareInstanceRegistryImpl - Got 1 instances from neighboring DS node
+2023-06-01 11:24:57.427 [Thread-18] INFO  c.n.eureka.registry.PeerAwareInstanceRegistryImpl - Renew threshold is: 0
+2023-06-01 11:24:57.427 [Thread-18] INFO  c.n.eureka.registry.PeerAwareInstanceRegistryImpl - Changing status to UP
+2023-06-01 11:24:57.452 [Thread-18] INFO  o.s.c.n.e.s.EurekaServerInitializerConfiguration - Started Eureka Server
+2023-06-01 11:24:57.452 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9900 (http) with context path ''
+2023-06-01 11:24:57.453 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 9900
+2023-06-01 11:24:57.598 [http-nio-9900-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-01 11:24:57.598 [http-nio-9900-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-01 11:24:57.600 [http-nio-9900-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-06-01 11:24:57.723 [main] INFO  com.xiaostudy.eureka.EurekaApplication - Started EurekaApplication in 4.531 seconds (JVM running for 5.341)
+2023-06-01 11:25:06.281 [http-nio-9900-exec-8] INFO  c.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance CONFIG-SERVICE/192.168.147.209:9901 with status UP (replication=false)
+2023-06-01 11:25:16.975 [http-nio-9900-exec-9] WARN  c.netflix.eureka.registry.AbstractInstanceRegistry - No remote registry available for the remote region us-east-1
+2023-06-01 11:25:19.355 [http-nio-9900-exec-2] INFO  c.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance PRODUCER-SERVICE/192.168.147.209:9902 with status UP (replication=false)
+2023-06-01 11:25:30.002 [Eureka-CacheFillTimer] WARN  c.netflix.eureka.registry.AbstractInstanceRegistry - No remote registry available for the remote region us-east-1
+2023-06-01 11:25:35.379 [http-nio-9900-exec-4] INFO  c.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance WEB-SERVICE/192.168.147.209:9903 with status UP (replication=false)
+2023-06-01 11:25:57.298 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry - Unregistering application EUREKA-SERVICE with eureka with status DOWN
+2023-06-01 11:25:57.327 [http-nio-9900-exec-10] INFO  c.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance CONFIG-SERVICE/192.168.147.209:9901 with status DOWN (replication=false)
+2023-06-01 11:25:57.354 [http-nio-9900-exec-2] INFO  c.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance PRODUCER-SERVICE/192.168.147.209:9902 with status DOWN (replication=false)
+2023-06-01 11:25:57.378 [http-nio-9900-exec-1] INFO  c.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance WEB-SERVICE/192.168.147.209:9903 with status DOWN (replication=false)
+2023-06-01 11:25:57.429 [Eureka-EvictionTimer] INFO  c.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2023-06-01 11:25:57.458 [SpringApplicationShutdownHook] INFO  o.s.c.netflix.eureka.server.EurekaServerBootstrap - Shutting down Eureka Server..
+2023-06-01 11:25:57.467 [SpringApplicationShutdownHook] INFO  com.netflix.eureka.DefaultEurekaServerContext - Shutting down ...
+2023-06-01 11:25:57.477 [SpringApplicationShutdownHook] INFO  com.netflix.eureka.DefaultEurekaServerContext - Shut down
+2023-06-01 11:25:57.477 [SpringApplicationShutdownHook] INFO  o.s.c.netflix.eureka.server.EurekaServerBootstrap - Eureka Service is now shutdown...
+2023-06-01 11:25:57.478 [SpringApplicationShutdownHook] INFO  com.netflix.eureka.DefaultEurekaServerContext - Shutting down ...
+2023-06-01 11:25:57.483 [SpringApplicationShutdownHook] INFO  com.netflix.eureka.DefaultEurekaServerContext - Shut down
+2023-06-01 11:25:57.493 [SpringApplicationShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2023-06-01 11:25:57.494 [SpringApplicationShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2023-06-01 11:37:46.039 [main] INFO  com.xiaostudy.eureka.EurekaApplication - Starting EurekaApplication using Java 1.8.0_152 on 阳光小男孩的阳光笔记本 with PID 59952 (D:\SpringCloud202208\eureka\target\classes started by 阳光小男孩的笔记本 in D:\SpringCloud202208)
+2023-06-01 11:37:46.045 [main] INFO  com.xiaostudy.eureka.EurekaApplication - The following 1 profile is active: "log"
+2023-06-01 11:37:47.616 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=313a0af6-23f2-3501-ba7e-00c37e869456
+2023-06-01 11:37:48.073 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9900 (http)
+2023-06-01 11:37:48.314 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2197 ms
+2023-06-01 11:37:49.240 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2023-06-01 11:37:49.242 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2023-06-01 11:37:49.394 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2023-06-01 11:37:49.395 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2023-06-01 11:37:50.078 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1c3b6963, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7364f68, org.springframework.security.web.context.SecurityContextPersistenceFilter@3009eed7, org.springframework.security.web.header.HeaderWriterFilter@194012a2, org.springframework.security.web.authentication.logout.LogoutFilter@68dfda77, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@629075f4, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@48e41b5d, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@55a0f011, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@404ced67, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6650a6c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2484dbb7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7ea42c82, org.springframework.security.web.session.SessionManagementFilter@60591e1b, org.springframework.security.web.access.ExceptionTranslationFilter@77083e41, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@78c74647]
+2023-06-01 11:37:51.543 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses Jersey
+2023-06-01 11:37:51.593 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-06-01 11:37:51.613 [main] INFO  o.s.cloud.netflix.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2023-06-01 11:37:51.642 [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2023-06-01 11:37:51.642 [main] INFO  com.netflix.discovery.DiscoveryClient - Client configured to neither register nor query for data.
+2023-06-01 11:37:51.648 [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1685590671647 with initial instances count: 0
+2023-06-01 11:37:51.683 [main] INFO  com.netflix.eureka.DefaultEurekaServerContext - Initializing ...
+2023-06-01 11:37:51.685 [main] WARN  com.netflix.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2023-06-01 11:37:51.705 [main] INFO  c.netflix.eureka.registry.AbstractInstanceRegistry - Finished initializing remote region registries. All known remote regions: []
+2023-06-01 11:37:51.706 [main] INFO  com.netflix.eureka.DefaultEurekaServerContext - Initialized
+2023-06-01 11:37:51.715 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-01 11:37:51.791 [main] INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry - Registering application EUREKA-SERVICE with eureka with status UP
+2023-06-01 11:37:51.817 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 9900 is already in use
+2023-06-01 11:37:51.819 [main] INFO  com.netflix.eureka.DefaultEurekaServerContext - Shutting down ...
+2023-06-01 11:37:51.829 [Thread-13] INFO  o.s.c.netflix.eureka.server.EurekaServerBootstrap - isAws returned false
+2023-06-01 11:37:51.830 [Thread-13] INFO  o.s.c.netflix.eureka.server.EurekaServerBootstrap - Initialized server context
+2023-06-01 11:37:51.830 [Thread-13] INFO  c.n.eureka.registry.PeerAwareInstanceRegistryImpl - Got 1 instances from neighboring DS node
+2023-06-01 11:37:51.830 [Thread-13] INFO  c.n.eureka.registry.PeerAwareInstanceRegistryImpl - Renew threshold is: 0
+2023-06-01 11:37:51.831 [Thread-13] INFO  c.n.eureka.registry.PeerAwareInstanceRegistryImpl - Changing status to UP
+2023-06-01 11:37:51.835 [Thread-13] ERROR o.s.c.netflix.eureka.server.EurekaServerBootstrap - Cannot bootstrap eureka server :
+java.lang.IllegalStateException: Timer already cancelled.
+	at java.util.Timer.sched(Timer.java:397)
+	at java.util.Timer.schedule(Timer.java:248)
+	at com.netflix.eureka.registry.AbstractInstanceRegistry.postInit(AbstractInstanceRegistry.java:1218)
+	at com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl.openForTraffic(PeerAwareInstanceRegistryImpl.java:258)
+	at org.springframework.cloud.netflix.eureka.server.InstanceRegistry.openForTraffic(InstanceRegistry.java:74)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.initEurekaServerContext(EurekaServerBootstrap.java:113)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.contextInitialized(EurekaServerBootstrap.java:71)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerInitializerConfiguration.lambda$start$0(EurekaServerInitializerConfiguration.java:68)
+	at java.lang.Thread.run(Thread.java:748)
+2023-06-01 11:37:51.836 [Thread-13] ERROR o.s.c.n.e.s.EurekaServerInitializerConfiguration - Could not initialize Eureka servlet context
+java.lang.RuntimeException: Cannot bootstrap eureka server :
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.contextInitialized(EurekaServerBootstrap.java:77)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerInitializerConfiguration.lambda$start$0(EurekaServerInitializerConfiguration.java:68)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Timer already cancelled.
+	at java.util.Timer.sched(Timer.java:397)
+	at java.util.Timer.schedule(Timer.java:248)
+	at com.netflix.eureka.registry.AbstractInstanceRegistry.postInit(AbstractInstanceRegistry.java:1218)
+	at com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl.openForTraffic(PeerAwareInstanceRegistryImpl.java:258)
+	at org.springframework.cloud.netflix.eureka.server.InstanceRegistry.openForTraffic(InstanceRegistry.java:74)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.initEurekaServerContext(EurekaServerBootstrap.java:113)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.contextInitialized(EurekaServerBootstrap.java:71)
+	... 2 common frames omitted
+2023-06-01 11:37:51.842 [main] INFO  com.netflix.eureka.DefaultEurekaServerContext - Shut down
+2023-06-01 11:37:51.853 [main] INFO  com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2023-06-01 11:37:51.854 [main] INFO  com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
