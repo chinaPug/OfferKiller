@@ -1,0 +1,80 @@
+server:
+  port: '@gateway.port@'
+
+eureka:
+  port: '@eureka.port@'
+  ip: '@eureka.ip@'
+  url-name: '@eureka.url.name@'
+  instance:
+    # 把本机IP注册到eureka而不是本机机器名
+    preferIpAddress: true
+    # 把本机IP注册到eureka，由下面参数组成
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://@eureka.user.name@:@eureka.user.password@@${eureka.ip}:${eureka.port}/${eureka.url-name}/
+
+spring:
+  application:
+    name: '@gateway.application.name@'
+  cloud:
+    loadbalancer:
+      retry:
+        # 关闭重试
+        enabled: false
+    gateway:
+      routes:
+        # 路由的id,没有规定规则但要求唯一,建议配合服务名
+        - id: '@producer.application.name@'
+          # 匹配后提供服务的路由地址，LoadBalancer做负载均衡
+          uri: lb://@producer.application.name@
+          predicates:
+            # 断言，路径相匹配的进行路由
+            - Path=/producer/**
+          filters:
+            # 去掉url一级前缀，例如http://localhost:9904/producer/producerTest/getByName，等同于http://localhost:9901/producerTest/getByName
+            - StripPrefix=1
+        - id: '@web.application.name@'
+          uri: lb://@web.application.name@
+          predicates:
+            - Path=/web/**
+          filters:
+            - StripPrefix=1
+    sentinel:
+      # 服务启动直接建立心跳连接，饿汉式
+      eager: true
+      filter:
+        # 手动注入Sentinel的过滤器，关闭Sentinel注入CommonFilter实例
+        enabled: false
+      # 限流时，自定义返回内容
+      scg:
+        fallback:
+          response-body: '{"code":200,"status":1,"msg":"服务器暂不可用啦！"}'
+          mode: response
+          response-status: 200
+      transport:
+        # 指定应用与Sentinel控制台交互的端口，应用本地会起一个该端口占用的HttpServer。如果端口被占用会往后+1，直到没有占用
+        port: '@sentinel.port@'
+        dashboard: localhost:9910
+  redis:
+    host: localhost
+    port: 6379
+    # 默认0
+    database: 1
+    lettuce:
+      pool:
+        # 连接池最大连接数（使用负值表示没有限制），默认值：8
+        max-active: 20
+        # 连接池中的最大空闲连接，默认值：8
+        max-idle: 10
+        # 连接池中的最小空闲连接，默认值：0
+        min-idle: 1
+        # 连接池最大阻塞等待时间（使用负值表示没有限制），默认值：-1，单位：毫秒
+        max-wait: 2000
+
+  profiles:
+    # 使用的配置文件后缀application-security.yml。一个或多个，中间英文逗号分开
+    active: security,common
+web:
+  application:
+    name: '@web.application.name@'

@@ -1,0 +1,16 @@
+spider:
+  application:
+    name: @spider.application.name@
+gateway:
+  application:
+    name: @gateway.application.name@
+feign:
+  client:
+    config:
+      default:
+        # ???1000
+        connect-timeout: 30000
+        read-timeout: 30000
+  compression:
+    request:
+      min-request-size: 4096

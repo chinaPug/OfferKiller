@@ -1,0 +1,31 @@
+server:
+  port: '@eureka.port@'
+
+eureka:
+  url-name: '@eureka.url.name@'
+  instance:
+    hostname: '@eureka.ip@'
+    leaseRenewalIntervalInSeconds: 25
+  server:
+    renewalPercentThreshold: 0.49
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://@eureka.user.name@:@eureka.user.password@@${eureka.instance.hostname}:${server.port}/${eureka.url-name}/
+
+spring:
+  application:
+    name: '@eureka.application.name@'
+  security:
+    user:
+      name: '@eureka.user.name@'
+      password: '@eureka.user.password@'
+  profiles:
+    active: log
+
+log:
+  level: INFO
+
+
+

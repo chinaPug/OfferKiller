@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.2</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>top.zhixingege</groupId>
+    <artifactId>workCloud</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>eureka</module>
+        <module>config</module>
+        <module>spider</module>
+        <module>feign</module>
+        <module>common</module>
+        <module>webService</module>
+        <module>security</module>
+        <module>gateway</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+
+        <java.version>1.8</java.version>
+        <spring-cloud.version>2021.0.3</spring-cloud.version>
+
+        <eureka.application.name>EUREKA-SERVICE</eureka.application.name>
+        <eureka.ip>localhost</eureka.ip>
+        <eureka.port>9900</eureka.port>
+        <eureka.url.name>eureka</eureka.url.name>
+        <eureka.user.name>admin</eureka.user.name>
+        <eureka.user.password>zhangzihao</eureka.user.password>
+
+        <config.application.name>CONFIG-SERVICE</config.application.name>
+        <config.port>9901</config.port>
+
+        <gateway.application.name>GATEWAY-SERVICE</gateway.application.name>
+        <gateway.port>9904</gateway.port>
+        <gateway.version>3.1.3</gateway.version>
+
+        <spider.application.name>SPIDER-SERVICE</spider.application.name>
+        <spider.port>9902</spider.port>
+
+        <web.application.name>WEB-SERVICE</web.application.name>
+        <web.port>9903</web.port>
+        <web1.port>9905</web1.port>
+
+        <sentinel.version>2021.0.1.0</sentinel.version>
+        <sentinel.port>9909</sentinel.port>
+
+        <!--        <spring.profiles.active>dev</spring.profiles.active>-->
+        <spring.profiles.active>prod</spring.profiles.active>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${parent.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

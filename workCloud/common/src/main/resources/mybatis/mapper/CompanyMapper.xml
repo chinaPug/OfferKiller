@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.zhixingege.common.dao.CompanyDao">
+    <select id="getCompanyByName" parameterType="String" resultType="Company">
+        select *
+        from company
+        where companyName=#{companyName}
+    </select>
+    <update id="updateCompany" parameterType="Company">
+        update company
+        <set>
+            companyName = #{companyName},
+            reflectName = #{reflectName},
+            companyUrl = #{companyUrl},
+            MD5 = #{MD5},
+            lastJobNums = #{lastJobNums},
+        </set>
+        where companyId = #{companyId}
+    </update>
+</mapper>

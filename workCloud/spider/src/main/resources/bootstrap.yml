@@ -1,0 +1,31 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:zhangzihao@localhost:9900/eureka/
+
+spring:
+  cloud:
+    config:
+      discovery:
+        # 开启配置中心服务发现支持
+        enabled: true
+        # 配置中心服务的id，这里不能用@@去获取参数
+        service-id: CONFIG-SERVICE
+      # 那个文件夹，config模块resources/config下的那个文件夹
+      label: prod
+      # 配置文件名称
+      name: config
+      # 读取后缀名称
+      profile: prod
+      # fail-fast 如果访问配置中心失败，则停止启动服务。默认false
+      fail-fast: true
+      # retry 访问配置中心失败时的重试策略
+      retry:
+        # 重试间隔
+        initial-interval: 1000
+        # 最多重试次数
+        max-attempts: 6
+        # 最大重试间隔
+        max-interval: 2000
+        # 每次重试时间是之前的倍数
+        multiplier: 1.1
